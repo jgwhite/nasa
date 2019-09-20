@@ -1,0 +1,60 @@
+<div class="bg-gray-100 p-4 min-h-screen flex flex-col font-sans text-gray-900">
+  <div class="rounded-xl shadow-md overflow-hidden flex-grow flex flex-col">
+    <header class="relative flex items-center justify-between bg-red-500 text-white px-4 py-5 font-bold">
+      <Logo
+        class="white fill-current h-4"
+      />
+
+      {{#each (array 0 6 12 18 24) as |x|}}
+        <WaveForm class="absolute -right-{{x}} white opacity-25 stroke-current w-1/2 h-2/3" />
+      {{/each}}
+
+      <CutOut class="absolute inset-x-1/3" />
+    </header>
+    <form class="bg-white flex flex-col flex-grow p-5">
+
+      <div class="flex flex-col flex-grow">
+        <legend class="mt-2 mb-6">
+          <b>Welcome.</b><br>
+          Please sign in using your official NASA credentials.
+        </legend>
+
+        <div class="flex flex-col mb-4">
+          <label for="email" class="mb-1">
+            <b>E-mail</b> or <b>Badge Number</b>
+          </label>
+          <input
+            id="email"
+            type="email"
+            class="bg-gray-300 p-3 outline-none border-b-2 focus:border-blue-400"
+            autofocus
+          >
+        </div>
+
+        <div class="flex flex-col mb-4">
+          <label for="password" class="mb-1">
+            <b>Password</b>
+          </label>
+          <input
+            id="password"
+            type="password"
+            class="bg-gray-300 p-3 outline-none border-b-2 focus:border-blue-400"
+          >
+        </div>
+
+        <p class="text-sm">
+          <a href="#" class="underline">Forgotten your credentials?</a>
+        </p>
+      </div>
+
+      <button
+        type="submit"
+        class="bg-gray-900 text-white p-3 text-left font-bold flex items-center justify-between"
+      >
+        Sign in
+        <Chevron class="w-2 h-4 stroke-current" />
+      </button>
+
+    </form>
+  </div>
+</div>
