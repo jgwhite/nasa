@@ -1,0 +1,18 @@
+<div class="rounded-xl shadow-md overflow-hidden flex flex-col flex-shrink-0 max-w-xs" ...attributes>
+  <header class="relative flex items-center justify-between bg-red-500 text-white px-4 py-5 font-bold">
+    <Logo
+      class="white fill-current h-4"
+    />
+
+    {{#each (array 0 6 12 18 24) as |x|}}
+      <WaveForm class="absolute -right-{{x}} white opacity-25 stroke-current w-1/2 h-2/3" />
+    {{/each}}
+
+    <CutOut class="absolute inset-x-1/3" />
+  </header>
+  <div class="bg-white flex flex-col flex-grow">
+
+    {{yield}}
+
+  </div>
+</div>

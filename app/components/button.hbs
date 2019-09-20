@@ -1,0 +1,10 @@
+<button
+  class="bg-gray-900 text-white p-3 text-left font-bold flex items-center justify-between"
+  ...attributes
+>
+  {{yield}}
+
+  {{#if (eq @decoration "chevron")}}
+    <Chevron class="w-2 h-4 stroke-current" />
+  {{/if}}
+</button>
