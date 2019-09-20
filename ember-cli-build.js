@@ -10,6 +10,26 @@ module.exports = function(defaults) {
         plugins: [
           require('tailwindcss')('./config/tailwind.js')
         ]
+      },
+      filter: {
+        enabled: true,
+        plugins: [
+          require('@fullhuman/postcss-purgecss')({
+            content: [
+              './app/index.html',
+              './app/**/*.hbs'
+            ],
+            extractors: [{
+              extractor: class {
+                static extract(content) {
+                  return content.match(/[\w\-/:]+/g) || [];
+                }
+              },
+              extensions: ['hbs', 'html']
+            }],
+            whitelistPatterns: [/^-right-\d+$/]
+          })
+        ]
       }
     }
   });
