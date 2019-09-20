@@ -2,10 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+html {
   background-image:
     radial-gradient(hsla(0, 0%, 0%, .25), hsla(0, 0%, 0%, .5)),
     url(/bg.jpg);
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
 }

@@ -50,14 +50,11 @@ module.exports = {
         '-24': '-24px',
         '1/3': '33.333%'
       },
-      width: {
-        72: '18rem'
-      },
       height: {
         '2/3': '66.666%'
       },
-      maxHeight: {
-        'md': '36rem'
+      minHeight: {
+        'badge': '36rem'
       }
     }
   },
